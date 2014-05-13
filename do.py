@@ -9,6 +9,9 @@ def createTeamEmails():
         userEmails = teamUserEmails(t)
         gandi.setForward(teamToBase(t), "\n".join(userEmails))
 
+def printAllTeamAliases():
+    print(",".join([ teamToEmail(t) for t in teams ]))
+        
 
 def createProtournoiUsers():
     for t in teams:
@@ -17,7 +20,22 @@ def createProtournoiUsers():
         passwd = teamToPasswd(t)
         protournoi.createNewUser(name, email, passwd)
 
-def sendInitialMailToTeams():
+def feedProtournoiInvitedTeams():
+    for t in teams:
+        people = u"{}: {}".format(t, u" / ".join(teamUserAliases(t)))
+        print(people)
+        protournoi.invite(people)
+    protournoi.submitInvites()
+
+def printTeams():
+    for t in teams:
+        base = teamToBase(t)
+        email = teamToEmail(t)
+        people = [ u"  - '{}' <{}>".format(*u) for u in teamUsers[t] ]
+        print(email)
+        print("\n".join(people))
+
+def sendInitialMailToTeams(reallySend = False):
     for t in teams:
         base = teamToBase(t)
         email = teamToEmail(t)
@@ -30,10 +48,17 @@ def sendInitialMailToTeams():
             "Your team is composed of:",
             ] + people + [
                 "",
-                "In addition to its email alias, your team also has an account on http://www.protournoi.fr",
-                "   user: "+teamToProTournoi(t),
-                "   pass: "+teamToPasswd(t)
+                # "In addition to its email alias, your team also has an account on http://www.protournoi.fr",
+                # "   user: "+teamToProTournoi(t),
+                # "   pass: "+teamToPasswd(t)
+                ""
             ]
         users = [email]
-        #print("\n".join(msg))
-        tools.mail(email, users, subject, msg)
+        if reallySend:
+            tools.mail(email, users, subject, msg)
+        else:
+            print("\n".join(msg))
+
+
+
+# reload(data) ; reload(team) ; reload(do) ; do.printTeams()

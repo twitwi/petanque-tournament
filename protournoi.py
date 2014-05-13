@@ -11,3 +11,9 @@ def createNewUser(name, email, passwd):
     clickCss('.btn.btn-submit[type="submit"]')
     waitForCss('.btn[href="/logout"]')
 
+def invite(people): # needs to have an open window at the right page
+    setTextAreaXpath('//*[@id="taikai_tournoibundle_joueursanonymestype_joueursAnonymes"]/descendant::input[@type="text"][last()]', people)
+    clickCss('.btn#ajout_invite')
+
+def submitInvites():
+    clickCss('.btn#joueurs_anonymes_submit')
