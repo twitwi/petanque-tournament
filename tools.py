@@ -24,7 +24,8 @@ def mail(src, dsts, subject, contentLines):
     msg['Subject'] = subject
     msg['From'] = src
     msg['To'] = ', '.join(dsts)
-    s.sendmail(src, dsts, msg.as_string())
+    print("s.sendmail(src, dsts, msg.as_string())")
+    print("MAIL NOT SENT, EDIT THE SOURCE")
 
     s.quit()
     # tools.mail('rem@heeere.com', ['team-01@heeere.com', 'team-04@heeere.com'], 'test mail 1', ['hello men', 'what is the issue dear?'])
