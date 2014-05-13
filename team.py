@@ -4,20 +4,36 @@ import hashlib
 import random
 import tools
 
+randomFromFoodle = False
+
 teams = [ '%02d' % i for i in range(1,16)] # 1 to 15 inclusive
 #teams = [ '%02d' % i for i in range(1,4)]
 
-usersCSV = tools.readCSVTable('data/foodle.csv')
-users = [ (t[0], t[1]) for t in usersCSV ]
-random.seed(cfg.seed + 100)
-random.shuffle(users)
-groupedUsers = tools.distributeInGroups(users, len(teams))
-
-
+users = []
 teamUsers = {}
-for i in range(len(teams)):
-    t = teams[i]
-    teamUsers[t] = filter(None, list(groupedUsers[i]))
+
+if randomFromFoodle:
+    usersCSV = tools.readCSVTable('data/foodle.csv')
+    users = [ (t[0], t[1]) for t in usersCSV ]
+    random.seed(cfg.seed + 100)
+    random.shuffle(users)
+    groupedUsers = tools.distributeInGroups(users, len(teams))
+    
+    for i in range(len(teams)):
+        t = teams[i]
+        teamUsers[t] = filter(None, list(groupedUsers[i]))
+    def dumpFoodled():
+        for t in teams:
+            for u in teamUsers[t]:
+                print(u"{};{};{}".format(t, u[0], u[1]))
+else:
+    teamsCSV = tools.readCSVTable('data/teams.csv')
+    users = [ (t[1], t[2]) for t in teamsCSV ]
+    random.seed(cfg.seed + 100)
+    for t in teams:
+        teamUsers[t] = []
+    for t in teamsCSV:
+        teamUsers[t[0]] += [(t[1], t[2])]
 
 def teamToBase(t):
     return 'team-'+t
