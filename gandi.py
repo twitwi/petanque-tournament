@@ -45,3 +45,16 @@ def setForward(base, newValue):
 #     setForward(i, 'blabla@heeere.com')
 #     defaultImplicit()
 
+
+### EXAMPLE
+# cat /dev/urandom | hexdump -C | awk '{i = i + 1; printf("remi-%02d-%s%s@heeere.com -- \n", i, $2, $3,$4,$5)}' | head -20 >> mails.txt
+# ipython
+
+# import gandi
+# gandi.login()
+
+# with open('mails.txt') as f:
+#     for l in f:
+#         if l.endswith('@heeere.com -- \n'):
+#             gandi.setForward(l[:-16], 'remi@heeere.com')
+

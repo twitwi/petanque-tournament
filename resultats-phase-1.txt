@@ -1,0 +1,42 @@
+A1 03
+A2 08
+A3 11
+
+B1 10
+B2 01
+B3 09
+B4 02
+
+C1 06
+C2 12
+C3 04
+
+D1 07
+D2 15
+D3 05
+D4 13
+
+Joueur 	# 	Points 	Joués 	Victoires 	Nuls 	Défaites 	Diff. pts
+03: eric Geai / Fréry Jordan / PERITORE Nathalie (NC) 	1 	4 	2 	2 	0 	0 	12
+08: stephane capraro / Andrey Voloshko / Julien Houzet (NC) 	2 	2 	2 	1 	0 	1 	-5
+11: rahaf aljundi / Hasnat / MarieF Blanc Mignon (NC) 	3 	0 	2 	0 	0 	2 	-7
+
+
+Joueur 	# 	Points 	Joués 	Victoires 	Nuls 	Défaites 	Diff. pts
+10: Remi Emonet / Eric SIGRONDE / frederique laforest (NC) 	1 	6 	3 	3 	0 	0 	22
+01: cangialosi chiara / Valentina Zantedeschi / Marc Sebban (NC) 	2 	4 	3 	2 	0 	1 	4
+09: OUNNAS Badreddine / Cayrel Pierre-Louis / Chiru Maddi (NC) 	3 	2 	3 	1 	0 	2 	-5
+02: thomas olivier / Michaël Perrot / margo (NC) 	4 	0 	3 	0 	0 	3 	-21
+
+
+Joueur 	# 	Points 	Joués 	Victoires 	Nuls 	Défaites 	Diff. pts
+06: Christophe Gravier / Goutaland / Emile (NC) 	1 	4 	2 	2 	0 	0 	10
+12: Elisa Fromont / Anton / Jp Peyrache (NC) 	2 	2 	2 	1 	0 	1 	4
+04: Pierre Maret / VORON François / HAFSI Meriem (NC) 	3 	0 	2 	0 	0 	2 	-14
+
+
+Joueur 	# 	Points 	Joués 	Victoires 	Nuls 	Défaites 	Diff. pts
+07: JP Chatelon / Mathias Géry / Praveen Kumar (NC) 	1 	6 	3 	3 	0 	0 	26
+15: Jérémie BENNEGENT / VINCENT Patrick / Abhinaba Roy (NC) 	2 	4 	3 	2 	0 	1 	6
+05: Sedao / Olivier Alata / Julien Subercaze (NC) 	3 	2 	3 	1 	0 	2 	-5
+13: Juan pablo ROSSO PIRELA / Leonor Becerra / JJ Rousseau (NC) 	4 	0 	3 	0 	0 	3 	-27
