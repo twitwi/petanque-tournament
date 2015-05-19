@@ -44,8 +44,7 @@ def sendInitialMailToTeams(reallySend = False):
         msg = [
             "Welcome to the petanque tournament!",
             "",
-            "You are "+base+" and you have an email alias "+teamToEmail(t)+" that you can use.",
-            "Your team is composed of:",
+            "You are "+base+" and you have an email alias "+teamToEmail(t)+" that corresponds to your team, composed of:",
             ] + people + [
                 "",
                 # "In addition to its email alias, your team also has an account on http://www.protournoi.fr",

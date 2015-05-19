@@ -4,10 +4,9 @@ import hashlib
 import random
 import tools
 
-randomFromFoodle = False
+randomFromFoodle = True
 
-teams = [ '%02d' % i for i in range(1,16)] # 1 to 15 inclusive
-#teams = [ '%02d' % i for i in range(1,4)]
+teams = [ '%02d' % i for i in range(1,9)] # 1 to 9 inclusive
 
 users = []
 teamUsers = {}
