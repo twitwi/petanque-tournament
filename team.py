@@ -4,7 +4,7 @@ import hashlib
 import random
 import tools
 
-randomFromFoodle = True
+randomFromFoodle = False
 
 teams = [ '%02d' % i for i in range(1,9)] # 1 to 9 inclusive
 

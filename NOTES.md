@@ -15,6 +15,7 @@ Generation of teams
   - set the number of teams (range(1,9) for 8 teams)
   - set randomFromFoodle to True
   - iterate with changing the seed (in `data/__init__.py`) and doing `python -c "import team ; team.dumpFoodled()"`
+  - then save the output to `data/teams.csv` and switch the boolean to False again
 
 Update of email aliases
 
@@ -26,3 +27,18 @@ python
 ```
 
 Protournoi setup: manually this year
+
+Fill in the framapad, need pretty list of teams
+
+```
+python
+>>> import do
+>>> do.printTeams()
+```
+
+Sending emails to teams
+
+- preview: `do.sendInitialMailToTeams()`
+- after previewing (in the same way), need to edit `tools.py`
+- then: `do.sendInitialMailToTeams(True)`
+
