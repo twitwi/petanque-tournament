@@ -5,7 +5,9 @@ import data as cfg
 def login():
     driver.get('https://www.gandi.net/login')
     e = driver.find_element_by_id("logintext")
-    e.send_keys(cfg.user+'\t') 
+    e.send_keys(cfg.user) 
+    e = driver.find_element_by_id("passwordtext")
+    e.click()
     implicit(100) # seconds
     driver.find_element_by_css_selector("a[href='/login/out']")
     defaultImplicit()
@@ -56,7 +58,7 @@ gandi.login()
 
 with open('dnd-mails.txt') as f:
     for l in list(filter(lambda l: l.endswith('@heeere.com -- \n'), 
-                         f.readlines())):
+                         f.readlines()))[57:]:
         print("gandi.setForward(", l[:-16], ", 'remi@heeere.com')")
         gandi.setForward(l[:-16], 'remi@heeere.com')
 """
